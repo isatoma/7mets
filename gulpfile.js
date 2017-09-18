@@ -14,7 +14,7 @@ gulp.task('scss', function() {
 		cssnext()
 	];
 	return gulp.src(paths.scss + '**/*.scss')
-	.pipe(sass())
+	.pipe(sass({outputStyle: 'expanded'}))
 	.pipe(postcss(processors))
 	.pipe(gulp.dest(paths.css))
 });
