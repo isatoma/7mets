@@ -23,6 +23,7 @@ gulp.task('scss', function() {
 gulp.task('copy', function() {
 	gulp.src([
 		'src/**/*',
+		'!**/*.scss',
 	])
 	.pipe(gulp.dest('dist'));
 });

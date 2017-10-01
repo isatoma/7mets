@@ -11,6 +11,11 @@
 	box-sizing: border-box;
 }
 
+@font-face {
+	font-family: 'MyFont';
+	src: url('../font/kaisho.ttf');
+}
+
 body {
 	 font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, Meiryo, sans-serif;
 }
@@ -23,16 +28,16 @@ body {
 	text-align: center;
 	margin-bottom: 40px;
 	h2 {
-		font-size: 2rem;
+		font-size: 2.1rem;
 		line-height: 1.7em;
 		strong {
 			font-size: 2.5rem;
 		}
 	}
 	h3 {
-		font-size: 1.6rem;
-		line-height: 1.7em;
-
+		font-size: 2rem;
+		line-height: 1.6em;
+		font-weight: 900;
 	}
 	h4 {
 		font-size: 1.4rem;
@@ -108,6 +113,21 @@ body {
 		margin-bottom: 30px;
 		font-size: 0.9rem;
 		line-height: 1.2em;
+	}
+}
+
+.item__txt__handWriting {
+	font-family:'MyFont';
+	width: 700px;
+	margin: 0 auto;
+	p {
+		margin-bottom: 30px;
+		line-height: 1.8em;
+		display: inline;
+		padding-bottom: 5px;
+		font-size: 1.3rem;
+		line-height: 36px;
+		background: url(../img/bg-note03.png) bottom;
 	}
 }
 
@@ -309,28 +329,73 @@ body {
 		}
 		.txt_line {
 			text-decoration: line-through;
+			strong {
+				font-weight: 600;
+				font-size: 1.2rem;
+			}
 		}
 	}
 	.table_empha {
 		font-size: 1.7rem;
 		font-weight: 500;
 		color: #ff0000;
+		position: relative;
 		span {
 			font-size: 0.9rem;
 			display: block;
 			padding-top: 5px;
 		}
+		.baloon {
+			background: #ff0000;
+			padding: 10px;
+			color: #fff;
+			position: absolute;
+			top: -37px;
+			border-radius: 8px;
+			left: 50px;
+			&:after {
+				content: "";
+				position: absolute;
+				bottom: -6px; left: 50%;
+				margin-left: -6px;
+				display: block;
+				width: 0px;
+				height: 0px;
+				border-style: solid;
+				border-width: 6px 6px 0 6px;
+				border-color: #ff0000 transparent transparent transparent;
+			}
+		}
 	}
 
 }
 
-.img_security_wrap {
-	position: relative;
-	.img_security {
-		position: absolute;
-		right: 25%;
-		top: -130px;
+.item__info {
+	border: 1px solid #6f6f6f;
+	border-radius: 3px;
+	padding: 20px;
+	width: 50%;
+	margin: 0 auto;
+	list-style: none;
+	text-align: center;
+	li {
+		padding-bottom: 15px;
+		&:first-child {
+			background: #6f6f6f;
+			margin-bottom: 10px;
+			padding: 5px;
+			color: #fff;
+		}
+		&:last-child {
+			padding-bottom: 0;
+		}
 	}
+}
+
+.img_security_wrap {
+	text-align: center;
+	margin-top: -40px;
+	width: 100%;
 }
 
 .cvn__table {
@@ -491,14 +556,14 @@ footer {
 		text-align: center;
 		margin-bottom: 20px;
 		h2 {
-			font-size: 1.2rem;
+			font-size: 1.3rem;
 			line-height: 1.5em;
 			strong {
 				font-size: 1.8rem;
 			}
 		}
 		h3 {
-			font-size: 1.1rem;
+			font-size: 1.2rem;
 			line-height: 1.4em;
 
 		}
@@ -579,7 +644,12 @@ footer {
 
 			}
 			.table_empha {
-				font-size: 1.2rem;	
+				font-size: 1.2rem;
+				.baloon {
+					padding: 5px;
+					top: -57px;
+					left: -7px;
+				}
 			}
 		}
 	}
@@ -648,7 +718,11 @@ footer {
 		}
 	}
 	.img_security_wrap {
-		display: none;
+		margin-top: -20px;
+		img {
+			width: 92px;
+			height: 85px;
+		}
 	}
 	.q-and-a {
 		padding: 0;
@@ -677,6 +751,15 @@ footer {
 			padding: 10px;
 			word-break: break-all;
 		}	
+	}
+	.item__txt__handWriting {
+		width: 100%;
+		p {
+			font-size: 1.0rem;
+		}
+	}
+	.item__info {
+		width: 100%;
 	}
 
 }

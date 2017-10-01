@@ -110,6 +110,11 @@ input, select {
           box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'MyFont';
+  src: url("../font/kaisho.ttf");
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, Meiryo, sans-serif;
 }
@@ -124,8 +129,8 @@ body {
 }
 
 .header__main h2 {
-  font-size: 32px;
-  font-size: 2rem;
+  font-size: 33.6px;
+  font-size: 2.1rem;
   line-height: 1.7em;
 }
 
@@ -135,9 +140,10 @@ body {
 }
 
 .header__main h3 {
-  font-size: 25.6px;
-  font-size: 1.6rem;
-  line-height: 1.7em;
+  font-size: 32px;
+  font-size: 2rem;
+  line-height: 1.6em;
+  font-weight: 900;
 }
 
 .header__main h4 {
@@ -228,6 +234,23 @@ body {
   font-size: 14.4px;
   font-size: 0.9rem;
   line-height: 1.2em;
+}
+
+.item__txt__handWriting {
+  font-family: 'MyFont';
+  width: 700px;
+  margin: 0 auto;
+}
+
+.item__txt__handWriting p {
+  margin-bottom: 30px;
+  line-height: 1.8em;
+  display: inline;
+  padding-bottom: 5px;
+  font-size: 20.8px;
+  font-size: 1.3rem;
+  line-height: 36px;
+  background: url(../img/bg-note03.png) bottom;
 }
 
 .item__txt-center {
@@ -465,11 +488,18 @@ body {
   text-decoration: line-through;
 }
 
+.table__normal td .txt_line strong {
+  font-weight: 600;
+  font-size: 19.2px;
+  font-size: 1.2rem;
+}
+
 .table__normal .table_empha {
   font-size: 27.2px;
   font-size: 1.7rem;
   font-weight: 500;
   color: #ff0000;
+  position: relative;
 }
 
 .table__normal .table_empha span {
@@ -479,14 +509,59 @@ body {
   padding-top: 5px;
 }
 
-.img_security_wrap {
-  position: relative;
+.table__normal .table_empha .baloon {
+  background: #ff0000;
+  padding: 10px;
+  color: #fff;
+  position: absolute;
+  top: -37px;
+  border-radius: 8px;
+  left: 50px;
 }
 
-.img_security_wrap .img_security {
+.table__normal .table_empha .baloon:after {
+  content: "";
   position: absolute;
-  right: 25%;
-  top: -130px;
+  bottom: -6px;
+  left: 50%;
+  margin-left: -6px;
+  display: block;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 6px 6px 0 6px;
+  border-color: #ff0000 transparent transparent transparent;
+}
+
+.item__info {
+  border: 1px solid #6f6f6f;
+  border-radius: 3px;
+  padding: 20px;
+  width: 50%;
+  margin: 0 auto;
+  list-style: none;
+  text-align: center;
+}
+
+.item__info li {
+  padding-bottom: 15px;
+}
+
+.item__info li:first-child {
+  background: #6f6f6f;
+  margin-bottom: 10px;
+  padding: 5px;
+  color: #fff;
+}
+
+.item__info li:last-child {
+  padding-bottom: 0;
+}
+
+.img_security_wrap {
+  text-align: center;
+  margin-top: -40px;
+  width: 100%;
 }
 
 .cvn__table {
@@ -657,14 +732,14 @@ footer .copyright {
     margin-bottom: 20px;
   }
   .header__main h2 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     line-height: 1.5em;
   }
   .header__main h2 strong {
     font-size: 1.8rem;
   }
   .header__main h3 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.4em;
   }
   .header__main h4 {
@@ -744,6 +819,11 @@ footer .copyright {
   .pale-blue__bg .table__normal .table_empha {
     font-size: 1.2rem;
   }
+  .pale-blue__bg .table__normal .table_empha .baloon {
+    padding: 5px;
+    top: -57px;
+    left: -7px;
+  }
   .base__contents {
     width: 100%;
     padding: 20px;
@@ -801,7 +881,11 @@ footer .copyright {
     width: 60%;
   }
   .img_security_wrap {
-    display: none;
+    margin-top: -20px;
+  }
+  .img_security_wrap img {
+    width: 92px;
+    height: 85px;
   }
   .q-and-a {
     padding: 0;
@@ -827,5 +911,14 @@ footer .copyright {
   footer .copyright {
     padding: 10px;
     word-break: break-all;
+  }
+  .item__txt__handWriting {
+    width: 100%;
+  }
+  .item__txt__handWriting p {
+    font-size: 1.0rem;
+  }
+  .item__info {
+    width: 100%;
   }
 }
