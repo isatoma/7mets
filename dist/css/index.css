@@ -307,6 +307,16 @@ body {
   padding: 30px 0;
 }
 
+.pale-blue__bg .item__txt {
+  width: 600px;
+  margin-top: 30px;
+}
+
+.pale-blue__bg .item__txt .eme {
+  font-size: 18px;
+  font-weight: 500;
+}
+
 .bounus__contents {
   border: 2px solid #2dc2cb;
   border-radius: 3px;
@@ -317,6 +327,7 @@ body {
 }
 
 .bounus__contents .bounus__header {
+  margin-bottom: 20px;
   padding: 20px;
   background: rgba(0, 0, 0, .6);
   color: #fff;
@@ -805,6 +816,13 @@ footer .copyright {
   .pale-blue__bg {
     margin: -10px;
     padding: 10px;
+  }
+  .pale-blue__bg .item__txt {
+    width: 100%;
+  }
+  .pale-blue__bg .item__txt .eme {
+    font-size: 14px;
+    margin-bottom: 30px;
   }
   .pale-blue__bg .table__normal {
     width: 100%;

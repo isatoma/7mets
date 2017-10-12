@@ -177,7 +177,16 @@ body {
 .pale-blue__bg {
 	background: #dcfdff;
 	padding: 30px 0;
+	.item__txt {
+		width: 600px;
+		margin-top: 30px;
+		.eme {
+			font-size: 18px;
+			font-weight: 500;
+		}
+	}
 }
+
 
 .bounus__contents {
 	border: 2px solid #2dc2cb;
@@ -187,6 +196,7 @@ body {
 	margin: 30px auto;
 	background: #fff;
 	.bounus__header {
+		margin-bottom: 20px;
 		padding: 20px;
 		background: rgba(0, 0, 0, .6);
 		color: #fff;
@@ -633,6 +643,13 @@ footer {
 	.pale-blue__bg {
 		margin: -10px;
 		padding: 10px;
+		.item__txt {
+			width: 100%;
+			.eme {
+				font-size: 14px;
+				margin-bottom: 30px;
+			}
+		}
 		.table__normal {
 			width: 100%;
 			th {
